@@ -1,0 +1,12 @@
+{
+  "development": {
+    "apiUrl": "https://jesus-wisord.herokuapp.com",
+    "contentApiKey": "5498e6788ba6dc63d6381aad5b",
+    "version": "v2"
+  },
+  "production": {
+    "apiUrl": "https://jesus-wisord.herokuapp.com",
+    "contentApiKey": "5498e6788ba6dc63d6381aad5b",
+    "version": "v2"
+  }
+}
