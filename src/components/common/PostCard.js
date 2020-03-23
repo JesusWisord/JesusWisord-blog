@@ -31,7 +31,7 @@ const PostCard = ({ post }) => {
                     <span>{ post.primary_author.name }</span>
                 </div>
                 <div className="post-card-footer-right">
-                    <div>{readingTime}</div>
+                    <div>Leer más</div>
                 </div>
             </footer>
         </Link>
