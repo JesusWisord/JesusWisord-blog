@@ -1,0 +1,24 @@
+.Translation__button{
+  margin-right: 10px;
+  background-color: #2E9DD5;
+  font-size: 16px;
+  border-radius: 25px;
+  height: 25px;
+  padding: 0 10px;
+  color: white;
+  outline: none;
+  transition: .5s;
+}
+
+.Translation__button:hover{
+  background-color: #045984;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+}
+
+@media screen and (max-width: 350px){
+  .Translation__button{
+    font-size: 12px;
+  }
+}

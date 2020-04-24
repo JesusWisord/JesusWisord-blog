@@ -664,8 +664,8 @@ h6 {
 .site-head {
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #fff;
-    background: var(--color-base);
+    color: #000;
+    background: (#fff);
     background-position: center;
     background-size: cover;
 }
@@ -673,7 +673,7 @@ h6 {
 .site-nav-item {
     display: inline-block;
     padding: 5px 10px;
-    color: #fff;
+    color: #000;
     opacity: 0.7;
 }
 
@@ -709,14 +709,13 @@ h6 {
 .site-banner {
     max-width: 80%;
     margin: 0 auto;
-    padding: 10vw 0;
     text-align: center;
 }
 
 .site-banner-title {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: #000;
     font-size: 4rem;
     line-height: 1.3em;
 }

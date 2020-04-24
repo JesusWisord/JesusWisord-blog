@@ -20,9 +20,9 @@ import '../../styles/app.css'
 */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
-    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
+    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@JesusWisord/, ``)}` : null
     const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
-
+    const logo = `https://jesuswisord.s3.amazonaws.com/Assets/LogoHorizontal%402x.png`
     return (
         <>
             <Helmet>
@@ -35,15 +35,12 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
-                    <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
+                    <header className="site-head" >
                         <div className="container">
                             <div className="site-mast">
                                 <div className="site-mast-left">
                                     <Link to="/">
-                                        {site.logo ?
-                                            <img className="site-logo" src={site.logo} alt={site.title} />
-                                            : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                        }
+                                        <img className="site-logo" src={logo} alt={site.title} />
                                     </Link>
                                 </div>
                                 <div className="site-mast-right">
@@ -54,7 +51,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </div>
                             { isHome ?
                                 <div className="site-banner">
-                                    <h1 className="site-banner-title">Jesus Wisord Blog</h1>
+                                    <img className="site-banner-logo" src={logo} alt={site.title} />
                                     <p className="site-banner-desc">{site.description}</p>
                                 </div> :
                                 null}

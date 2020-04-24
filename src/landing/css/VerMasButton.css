@@ -1,0 +1,18 @@
+.VerMas__button{
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #2E9DD5;
+  font-size: 24px;
+  color: #D8F2FF;
+  outline: none;
+  transition: .5s;
+}
+
+.VerMas__button:hover{
+  background-color: #045984;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+}
+
