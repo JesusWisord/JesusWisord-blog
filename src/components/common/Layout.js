@@ -22,7 +22,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
     const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
     const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
-
+    const images = data.allFile.edges;
     return (
         <>
             <Helmet>
@@ -35,13 +35,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
-                    <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
+                    <header className="site-head" >
                         <div className="container">
                             <div className="site-mast">
                                 <div className="site-mast-left">
                                     <Link to="/">
                                         {site.logo ?
-                                            <img className="site-logo" src={site.logo} alt={site.title} />
+                                            <img className="site-logo" src={images[4].node.childImageSharp.fluid.src} alt={site.title} />
                                             : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
                                         }
                                     </Link>
@@ -54,7 +54,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </div>
                             { isHome ?
                                 <div className="site-banner">
-                                    <h1 className="site-banner-title">Jesus Wisord Blog</h1>
+                                    <img src={images[5].node.childImageSharp.fluid.src} alt=""/>
                                     <p className="site-banner-desc">{site.description}</p>
                                 </div> :
                                 null}
@@ -118,11 +118,15 @@ const DefaultLayoutSettingsQuery = props => (
                         }
                     }
                 }
-                file(relativePath: {eq: "ghost-icon.png"}) {
-                    childImageSharp {
-                        fixed(width: 30, height: 30) {
-                            ...GatsbyImageSharpFixed
+                allFile {
+                    edges{
+                      node{
+                        childImageSharp{
+                          fluid(maxWidth: 500){
+                            src
+                          }
                         }
+                      }
                     }
                 }
             }

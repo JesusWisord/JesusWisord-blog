@@ -662,10 +662,11 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-head {
+    height: 300px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #fff;
-    background: var(--color-base);
+    color: #000;
+    background-color: #15181b42;
     background-position: center;
     background-size: cover;
 }
@@ -673,7 +674,7 @@ h6 {
 .site-nav-item {
     display: inline-block;
     padding: 5px 10px;
-    color: #fff;
+    color: #000;
     opacity: 0.7;
 }
 
@@ -684,11 +685,12 @@ h6 {
 
 .site-nav-icon {
     height: 15px;
+    color: #000;
     margin: -5px 0 0;
 }
 
 .site-logo {
-    height: 25px;
+    height: 50px;
 }
 
 .site-mast {
@@ -709,14 +711,15 @@ h6 {
 .site-banner {
     max-width: 80%;
     margin: 0 auto;
-    padding: 10vw 0;
+    padding: 0;
     text-align: center;
+    color: #000;
 }
 
 .site-banner-title {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: #000;
     font-size: 4rem;
     line-height: 1.3em;
 }
