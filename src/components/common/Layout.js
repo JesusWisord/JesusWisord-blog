@@ -54,10 +54,12 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><FaRss className="site-nav-icon" /></a>
                                 </div>
                             </div>
-                            <div className="site-banner">
-                                <img src={images[1].node.childImageSharp.fluid.src} alt=""/>
-                                <p className="site-banner-desc">{site.description}</p>
-                            </div>
+                            {isHome ? 
+                                <div className="site-banner">
+                                    <img src={images[1].node.childImageSharp.fluid.src} alt=""/>
+                                    <p className="site-banner-desc">{site.description}</p>
+                                </div> :
+                                null}
                             <nav className="site-nav">
                                 <div className="site-nav-left">
                                     {/* The navigation items as setup in Ghost */}
