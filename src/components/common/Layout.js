@@ -42,7 +42,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div className="site-mast-left">
                                     <Link to="/">
                                         {site.logo ?
-                                            <img className="site-logo" src={images[2].node.childImageSharp.fluid.src} alt={site.title} />
+                                            <img className="site-logo" src={images[1].node.childImageSharp.fluid.src} alt={site.title} />
                                             : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
                                         }
                                     </Link>
@@ -55,7 +55,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </div>
                             </div>
                             <div className="site-banner">
-                                <img src={images[1].node.childImageSharp.fluid.src} alt=""/>
+                                <img src={images[2].node.childImageSharp.fluid.src} alt=""/>
                                 <p className="site-banner-desc">{site.description}</p>
                             </div>
                             <nav className="site-nav">
