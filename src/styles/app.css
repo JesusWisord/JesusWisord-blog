@@ -662,7 +662,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-head {
-    height: 300px;
+    height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #000;
@@ -779,6 +779,9 @@ h6 {
     .post-feed {
         grid-template-columns: 1fr 1fr;
     }
+    .site-logo{
+        height: 25px;
+    }
 }
 @media (max-width: 680px) {
     .post-feed {
@@ -798,6 +801,18 @@ h6 {
 .post-card:nth-child(5){
     grid-column: 2/4;
     grid-row: 2/3;
+}
+
+@media screen and (max-width: 968px) {
+    .post-card:nth-child(1){
+        grid-column: initial;
+        grid-row: initial;
+    }
+
+    .post-card:nth-child(5){
+        grid-column: initial;
+        grid-row: initial;
+    }
 }
 
 .post-card:hover {
