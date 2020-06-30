@@ -1,0 +1,53 @@
+/* Colours for Rainbow */
+$color-red: #FB000E;
+$color-orange: #FC710E;
+$color-yellow: #DECC24;
+$color-green: #35B204;
+$color-blue: #2501FF;
+$color-purple: #8600FF;
+
+.site-nav-left > .site-nav-item > div{
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  position: relative;
+  z-index: -1;
+  bottom: 20px;
+  left: 50%;
+  background-color: white;
+}
+
+
+.site-nav-left > .site-nav-item:nth-child(1):hover > div{
+  background-color: pink;
+}
+
+.site-nav-left > .site-nav-item:nth-child(2):hover > div{
+  background-color: $color-red;
+}
+
+.site-nav-left > .site-nav-item:nth-child(3):hover > div{
+  background-color: $color-orange;
+}
+
+.site-nav-left > .site-nav-item:nth-child(4):hover > div{
+  background-color: $color-yellow;
+}
+
+.site-nav-left > .site-nav-item:nth-child(5):hover > div{
+  background-color: $color-green;
+}
+
+.site-nav-left > .site-nav-item:nth-child(6):hover > div{
+  background-color: $color-blue;
+}
+
+.site-nav-left > .site-nav-item:nth-child(7):hover > div{
+  background-color: $color-purple;
+}
+
+.site-nav-left > .site-nav-item:hover > div{
+  transform: translateY(-20px);
+  transition: all 500ms ease;
+  z-index: 1;
+}

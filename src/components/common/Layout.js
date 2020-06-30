@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaRss } from 'react-icons/fa'
 
 import { Navigation } from '.'
@@ -10,6 +9,7 @@ import config from '../../utils/siteConfig'
 
 // Styles
 import '../../styles/app.css'
+import '../../styles/styles.scss'
 
 /**
 * Main layout component
@@ -41,10 +41,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             <div className="site-mast">
                                 <div className="site-mast-left">
                                     <Link to="/">
-                                        {site.logo ?
-                                            <img className="site-logo" src={images[2].node.childImageSharp.fluid.src} alt={site.title} />
-                                            : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                        }
+                                        <img className="site-logo" src={images[2].node.childImageSharp.fluid.src} alt={site.title} />
                                     </Link>
                                 </div>
                                 <div className="site-mast-right">
