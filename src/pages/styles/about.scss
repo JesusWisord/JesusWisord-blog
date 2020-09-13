@@ -1,0 +1,23 @@
+.about-container{
+  display: grid;
+  grid-template-columns: 350px 1fr;
+}
+
+.about-image {
+  height: 350px;
+}
+
+.about-text {
+  text-align: justify;;
+}
+
+@media screen and (max-width: 600px){
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-image {
+    height: auto;
+    padding: 20px 0;
+  }
+}
