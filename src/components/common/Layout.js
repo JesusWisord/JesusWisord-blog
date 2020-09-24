@@ -88,7 +88,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             {isHome ? 
                                 <div className="site-banner">
                                     <img src="/layout/Blog Color.png" alt="Cover"/>
-                                    <p className="site-banner-desc">{site.description}</p>
                                 </div> :
                                 null}
                             <nav className="site-nav">
